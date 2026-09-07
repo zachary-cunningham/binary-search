@@ -1,0 +1,51 @@
+1.1
+
+"often" — return 4
+"never" - return -1
+
+1.2
+
+We import the functionality stored in "search.py"
+We then call the linear function within (search.liner())
+We pass in two arguments, the list to be searched, and value we want to find in this list
+The function linearly checks each item against our desired value
+Upon a match, it returns the INDEX in the list where that value is stored
+If no match, it returns -1
+
+1.3
+
+B: If we start at index, we skip the first item in the list, meaning that the search might return 'does not occur' when the value is the first item
+
+C: The highest index in the list, will always be -1 from the length. If we set the loop to check for data[length], it's search for an item that doesn't exist
+The last item has an index of One LESS than the length.
+
+[a, b, c, d] ...
+
+<= length (4), index 4 doesn't exist
+
+D:
+
+0,  1, 2, 3, 4, 5
+[1, 2, 3, 4, 5, 4]
+
+When we are doing reverse order, we start from the end of the list. If we have the same value multiple times in the list, it'll find the duplicate item closer to the end of the list, and return that index as its final answer, instead of finding the duplicate item near the beginning of the list.
+
+1.7
+
+We'll look AT the word in the middle of the dictionary
+If the word matches, we return the middle location
+If the starting letter is FURTHER in the alphabet than the word we want, then we bring our upper bound to this middle
+but if the starting letter is EARLIER in the alphabet, then we bring our lower bound to the middle.
+this happens repeatedly, either until the item is found, or the upper bound is lower than the lower bound.
+
+1.9
+
+200 elements, result is at 62
+A:
+HIGH	199		99		99		74
+LOW		0		0		51		51
+MIDD	100		50		75		62	-> FOUND
+
+HIGH	199		99		99		74		61		61	61 61
+LOW		0		0		51		51		51		57	60	61
+MIDD	100		50		75		62		56		59	60 not found
